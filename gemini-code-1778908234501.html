@@ -7,6 +7,7 @@
     <title>Responsive Navigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Accordion animation for FAQ section */
         .accordion-content {
             display: grid;
             grid-template-rows: 0fr;
@@ -21,6 +22,7 @@
             overflow: hidden;
         }
 
+        /* Utility to hide scrollbars on draggable sections */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -33,7 +35,7 @@
             /* Firefox */
         }
 
-        /* Smooth scrolling for snap snapping, disable when actively dragging */
+        /* Smooth scrolling for snap containers, disabled when actively dragging */
         .snap-container {
             scroll-behavior: smooth;
         }
@@ -42,7 +44,7 @@
             scroll-behavior: auto;
         }
 
-        /* Custom scrollbar for desktop dropdowns */
+        /* Custom scrollbar style for desktop mega menus */
         .mega-menu-scroll::-webkit-scrollbar {
             width: 6px;
             height: 6px;
@@ -53,7 +55,7 @@
             border-radius: 4px;
         }
 
-        /* Remove default triangle from details/summary for mobile accordions */
+        /* Remove default arrow from details/summary for mobile accordion */
         details>summary {
             list-style: none;
         }
@@ -62,12 +64,12 @@
             display: none;
         }
 
-        /* Rotate arrow when details is open */
+        /* Rotate arrow icon when mobile accordion (details) is open */
         details[open] summary svg {
             transform: rotate(180deg);
         }
 
-        /* Custom Shiny Button Animation */
+        /* Custom shiny animation for buttons */
         .animate-shiny-button {
             position: relative;
             overflow: hidden;
@@ -85,6 +87,7 @@
             animation: shine 3s infinite;
         }
 
+        /* Keyframes for the shiny button animation */
         @keyframes shine {
             0% {
                 left: -100%;
@@ -103,8 +106,8 @@
 
 <body class="bg-gray-50 min-h-screen">
 
-    <!-- Fixed Navbar Container -->
-    <nav class="fixed top-0 left-0 w-full bg-white z-[99] border-b border-gray-100 shadow-sm">
+    <!-- ================= Navbar Section ================ -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white z-[99] border-b border-gray-100 shadow-sm">
         <div
             class="max-w-[1216px] mx-auto h-[86px] flex items-center justify-between lg:justify-start px-4 sm:px-6 lg:px-8 py-[18px]">
 
@@ -346,8 +349,8 @@
         </div>
     </nav>
 
-    <div id="Monthly-missions" class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
-
+    <!-- ================= Monthly Missions Section ================ -->
+    <section id="monthly-missions" class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <!-- Section Header -->
         <div class="text-center mb-10">
             <h2 class="text-3xl font-bold text-gray-900 mb-3">Give Monthly</h2>
@@ -610,10 +613,10 @@
                 View More Missions
             </button>
         </div>
+    </section>
 
-    </div>
-
-    <div class="w-full overflow-hidden bg-white">
+    <!-- ================= NGO Partners Section ================ -->
+    <section id="ngo-partners" class="w-full overflow-hidden bg-white mt-16 py-16">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header -->
@@ -804,47 +807,10 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- JavaScript for Mouse Grab & Drag Scrolling -->
-    <!-- <script>
-        const slider = document.getElementById('ngo-slider');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active'); // Removes smooth scroll for 1:1 dragging
-            slider.classList.remove('snap-x', 'snap-mandatory'); // Briefly suspend snapping while dragging
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener('mouseleave', () => {
-            if (!isDown) return;
-            isDown = false;
-            slider.classList.remove('active');
-            slider.classList.add('snap-x', 'snap-mandatory');
-        });
-
-        slider.addEventListener('mouseup', () => {
-            if (!isDown) return;
-            isDown = false;
-            slider.classList.remove('active');
-            slider.classList.add('snap-x', 'snap-mandatory');
-        });
-
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 1.5; // Scroll speed multiplier
-            slider.scrollLeft = scrollLeft - walk;
-        });
-    </script> -->
-
-    <div class="w-full bg-white border-y border-gray-100 py-16 lg:py-24">
+    <!-- ================= Impact Section ================ -->
+    <section id="impact" class="w-full bg-white border-y border-gray-100 py-16 lg:py-24">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Flex Container (Stacks on mobile, row on large screens) -->
@@ -915,9 +881,10 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="w-full overflow-hidden bg-white py-12 border-y border-gray-100">
+    <!-- ================= Testimonials Section ================ -->
+    <section id="testimonials" class="w-full overflow-hidden bg-white py-16 border-y border-gray-100">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header -->
@@ -1041,62 +1008,10 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- JavaScript for Mouse Grab & Drag Scrolling -->
-    <!-- JavaScript for Mouse Grab & Drag Scrolling -->
-    <script>
-        function enableDragScroll(sliderId) {
-            const slider = document.getElementById(sliderId);
-
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                slider.classList.add('active');
-                slider.classList.remove('snap-x', 'snap-mandatory');
-
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                if (!isDown) return;
-
-                isDown = false;
-                slider.classList.remove('active');
-                slider.classList.add('snap-x', 'snap-mandatory');
-            });
-
-            slider.addEventListener('mouseup', () => {
-                if (!isDown) return;
-
-                isDown = false;
-                slider.classList.remove('active');
-                slider.classList.add('snap-x', 'snap-mandatory');
-            });
-
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-
-                e.preventDefault();
-
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 1.5;
-
-                slider.scrollLeft = scrollLeft - walk;
-            });
-        }
-
-        // Enable drag scrolling for multiple sliders
-        enableDragScroll('testimonial-slider');
-        enableDragScroll('ngo-slider');
-    </script>
-
-    <!-- Main FAQ Wrapper -->
-    <div
+    <!-- ================= FAQ Section ================ -->
+    <section id="faq"
         class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8 bg-white py-16 rounded-2xl shadow-sm border border-gray-100">
         <section>
             <!-- Grid Container: Stacks on mobile, side-by-side on md+ screens -->
@@ -1354,44 +1269,10 @@
                 </div>
             </div>
         </section>
-    </div>
+    </section>
 
-    <!-- JavaScript for Accordion Logic -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const iconPlus = item.querySelector('.icon-plus');
-                const iconMinus = item.querySelector('.icon-minus');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('is-open');
-
-                    // Optional: Close all other accordions when one is opened
-                    accordionItems.forEach(otherItem => {
-                        otherItem.classList.remove('is-open');
-                        otherItem.querySelector('.icon-plus').classList.remove('hidden');
-                        otherItem.querySelector('.icon-minus').classList.add('hidden');
-                        // Reset text color for inactive
-                        otherItem.querySelector('span:first-child').classList.remove('text-[#E7424B]');
-                    });
-
-                    // Toggle current accordion
-                    if (!isOpen) {
-                        item.classList.add('is-open');
-                        iconPlus.classList.add('hidden');
-                        iconMinus.classList.remove('hidden');
-                        // Add an active color state to text (optional styling polish)
-                        header.querySelector('span:first-child').classList.add('text-[#E7424B]');
-                    }
-                });
-            });
-        });
-    </script>
-
-    <footer class="bg-white border-t border-gray-200 pt-12 pb-8">
+    <!-- ================= Footer Section ================ -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-8 mt-16">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Top Section: Links & Utilities Grid -->
@@ -1551,23 +1432,112 @@
         </div>
     </footer>
 
-    <!-- Mobile Toggle Script -->
+    <!-- ========================================= -->
+    <!--                 SCRIPTS                   -->
+    <!-- ========================================= -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const drawer = document.getElementById('mobile-menu-drawer');
-        const iconMenu = document.getElementById('icon-menu');
-        const iconClose = document.getElementById('icon-close');
+        // Wait for the DOM to be fully loaded before running scripts
+        document.addEventListener('DOMContentLoaded', () => {
 
-        btn.addEventListener('click', () => {
-            // Toggle visibility of the mobile menu drawer
-            drawer.classList.toggle('hidden');
+            // =========================================
+            // MOBILE MENU TOGGLE LOGIC
+            // =========================================
+            const btn = document.getElementById('mobile-menu-btn');
+            const drawer = document.getElementById('mobile-menu-drawer');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
 
-            // Prevent body scrolling when menu is open
-            document.body.style.overflow = drawer.classList.contains('hidden') ? 'auto' : 'hidden';
+            if (btn && drawer && iconMenu && iconClose) {
+                btn.addEventListener('click', () => {
+                    // Toggle visibility of the mobile menu drawer
+                    drawer.classList.toggle('hidden');
 
-            // Swap Hamburger and Close icons
-            iconMenu.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
+                    // Prevent body scrolling when menu is open
+                    document.body.style.overflow = drawer.classList.contains('hidden') ? 'auto' : 'hidden';
+
+                    // Swap Hamburger and Close icons
+                    iconMenu.classList.toggle('hidden');
+                    iconClose.classList.toggle('hidden');
+                });
+            }
+
+
+            // =========================================
+            // FAQ ACCORDION LOGIC
+            // =========================================
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const iconPlus = item.querySelector('.icon-plus');
+                const iconMinus = item.querySelector('.icon-minus');
+
+                if (header && iconPlus && iconMinus) {
+                    header.addEventListener('click', () => {
+                        const isOpen = item.classList.contains('is-open');
+
+                        // Close all other accordions when one is opened
+                        accordionItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('is-open');
+                                otherItem.querySelector('.icon-plus').classList.remove('hidden');
+                                otherItem.querySelector('.icon-minus').classList.add('hidden');
+                                // Reset text color for inactive headers
+                                const otherHeaderSpan = otherItem.querySelector('.accordion-header span:first-child');
+                                if (otherHeaderSpan) {
+                                    otherHeaderSpan.classList.remove('text-[#E7424B]');
+                                }
+                            }
+                        });
+
+                        // Toggle current accordion
+                        item.classList.toggle('is-open');
+                        iconPlus.classList.toggle('hidden');
+                        iconMinus.classList.toggle('hidden');
+
+                        // Add/remove active color state to the clicked header text
+                        const headerSpan = header.querySelector('span:first-child');
+                        if (headerSpan) {
+                            headerSpan.classList.toggle('text-[#E7424B]', !isOpen);
+                        }
+                    });
+                }
+            });
+
+
+            // =========================================
+            // DRAG-TO-SCROLL LOGIC FOR SLIDERS
+            // =========================================
+            function enableDragScroll(sliderId) {
+                const slider = document.getElementById(sliderId);
+                if (!slider) return;
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                slider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    slider.classList.add('active'); // Disables smooth scroll for 1:1 dragging
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+
+                slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('active'); });
+                slider.addEventListener('mouseup', () => { isDown = false; slider.classList.remove('active'); });
+
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 1.5; // Scroll speed multiplier
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+            }
+
+            // Initialize drag-to-scroll for both sliders
+            enableDragScroll('testimonial-slider');
+            enableDragScroll('ngo-slider');
         });
     </script>
 
