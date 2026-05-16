@@ -254,8 +254,96 @@
         </div>
     </nav>
 
+    <!-- ================= Hero Banner Slider ================ -->
+    <section id="hero-banner" class="w-full pt-28 pb-10">
+        <div class="relative w-full mx-auto group">
+
+            <!-- Slider Track (Center Mode via Padding & Snap) -->
+            <!-- CHANGED: md:px-[10%] to md:px-[5%] -->
+            <div id="hero-slider"
+                class="slider-track flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4">
+
+                <!-- Slide 1: GOA Monkeys -->
+                <!-- CHANGED: md:w-[80%] to md:w-[90%] -->
+                <div
+                    class="slide snap-center shrink-0 w-[100%] md:w-[90%] relative h-[240px] sm:h-[320px] transition-transform duration-300">
+                    <img alt="GOA Monkeys" src="https://cfstatic.give.do/fe08052f-9bfa-40b7-b096-c2d6ac7c63ab.webp"
+                        class="w-full h-full object-cover rounded-[15px] shadow-md">
+                </div>
+
+                <!-- Slide 2: Blindness OTM -->
+                <div
+                    class="slide snap-center shrink-0 w-[100%] md:w-[90%] relative h-[240px] sm:h-[320px] transition-transform duration-300">
+                    <img alt="Blindness OTM" src="https://cfstatic.give.do/fd21b01d-c414-40ad-846d-87ec40ef2282.webp"
+                        class="w-full h-full object-cover rounded-[15px] shadow-md">
+                </div>
+
+                <!-- Slide 3: Cuddles -->
+                <div
+                    class="slide snap-center shrink-0 w-[100%] md:w-[90%] relative h-[240px] sm:h-[320px] transition-transform duration-300">
+                    <img alt="Cuddles" src="https://cfstatic.give.do/548ec663-aa3b-4d90-ad4d-4762ee278ff0.webp"
+                        class="w-full h-full object-cover rounded-[15px] shadow-md">
+                </div>
+
+                <!-- Slide 4: Sapna Eye Hospital -->
+                <div
+                    class="slide snap-center shrink-0 w-[100%] md:w-[90%] relative h-[240px] sm:h-[320px] transition-transform duration-300">
+                    <img alt="Sapna Eye Hospital"
+                        src="https://cfstatic.give.do/87e37f4b-5980-4c91-b287-3c1ee2456983.webp"
+                        class="w-full h-full object-cover rounded-[15px] shadow-md">
+                </div>
+
+                <!-- Slide 5: Prathana Foundation -->
+                <div
+                    class="slide snap-center shrink-0 w-[100%] md:w-[90%] relative h-[240px] sm:h-[320px] transition-transform duration-300">
+                    <img alt="Prathana Foundation"
+                        src="https://cfstatic.give.do/74049a58-0912-4264-9d88-0162191799da.webp"
+                        class="w-full h-full object-cover rounded-[15px] shadow-md">
+                </div>
+
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button id="prev-btn"
+                class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+                aria-label="Previous slide">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                </svg>
+            </button>
+
+            <button id="next-btn"
+                class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+                aria-label="Next slide">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                </svg>
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center items-center gap-2 mt-6">
+                <button
+                    class="dot active w-2.5 h-2.5 rounded-full border border-gray-300 bg-gray-300 transition-all duration-300"
+                    data-index="0" aria-label="Go to slide 1"></button>
+                <button
+                    class="dot w-2.5 h-2.5 rounded-full border border-gray-300 bg-gray-300 transition-all duration-300"
+                    data-index="1" aria-label="Go to slide 2"></button>
+                <button
+                    class="dot w-2.5 h-2.5 rounded-full border border-gray-300 bg-gray-300 transition-all duration-300"
+                    data-index="2" aria-label="Go to slide 3"></button>
+                <button
+                    class="dot w-2.5 h-2.5 rounded-full border border-gray-300 bg-gray-300 transition-all duration-300"
+                    data-index="3" aria-label="Go to slide 4"></button>
+                <button
+                    class="dot w-2.5 h-2.5 rounded-full border border-gray-300 bg-gray-300 transition-all duration-300"
+                    data-index="4" aria-label="Go to slide 5"></button>
+            </div>
+
+        </div>
+    </section>
+
     <!-- ================= Monthly Missions Section ================ -->
-    <section id="monthly-missions" class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+    <section id="monthly-missions" class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <!-- Section Header -->
         <div class="text-center mb-10">
             <h2 class="text-3xl font-bold text-gray-900 mb-3">Give Monthly</h2>
