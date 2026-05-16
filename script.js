@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
+    enableDragScroll('testimonial-slider');
     enableDragScroll('ngo-slider');
     enableDragScroll('hero-slider');
 
