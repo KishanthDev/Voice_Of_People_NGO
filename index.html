@@ -692,7 +692,7 @@
 
                 <!-- Card 1 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/7b5924bd-6af8-4a3f-a468-53691eab9377.webp"
                             alt="Cancer treatment fundraiser" class="w-full h-full object-cover" />
@@ -705,30 +705,30 @@
                                 Mandal</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>1615 Donations</span>
                                 <span>⏱ 7 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 48%;"></div>
                                     </div>
-
                                     <div class="text-sm">
                                         <strong class="text-gray-900 text-base font-bold">₹23,80,739</strong>
                                         <span class="text-gray-500">Raised of ₹50,00,000 goal</span>
                                     </div>
                                 </div>
 
-                                <!-- Donate Button (Appears on hover) -->
+                                <!-- Donate Button (Static on mobile, Absolute Overlay on md+ hover) -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
@@ -739,7 +739,7 @@
 
                 <!-- Card 2 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/a0a9b9d9-5c24-4cda-a3f6-e24fd56815f4.webp"
                             alt="Folk arts fundraiser" class="w-full h-full object-cover" />
@@ -757,15 +757,16 @@
                                 You</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>288 Donations</span>
                                 <span>⏱ 2 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 7%;"></div>
                                     </div>
@@ -775,11 +776,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Donate Button Overlay -->
+                                <!-- Donate Button -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
@@ -790,7 +791,7 @@
 
                 <!-- Card 3 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/489b5434-33b4-4ab5-aea6-847a1ddc7935.webp"
                             alt="Toy Bank fundraiser" class="w-full h-full object-cover" />
@@ -808,15 +809,16 @@
                                 Charitable Trust</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>275 Donations</span>
                                 <span>⏱ 3 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 10%;"></div>
                                     </div>
@@ -826,11 +828,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Donate Button Overlay -->
+                                <!-- Donate Button -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
@@ -841,7 +843,7 @@
 
                 <!-- Card 4 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/58d1e335-c879-44dd-b34c-88623294819d.webp"
                             alt="Elderly shelter fundraiser" class="w-full h-full object-cover" />
@@ -857,15 +859,16 @@
                         <p class="text-sm text-gray-500 mb-6">by <span class="font-medium text-gray-700">Give</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>77,534 Donations</span>
                                 <span>⏱ 1410 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 100%;"></div>
                                     </div>
@@ -875,11 +878,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Donate Button Overlay -->
+                                <!-- Donate Button -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
@@ -890,7 +893,7 @@
 
                 <!-- Card 5 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/a2e3adb9-4809-4ac8-a0bc-6c1c25edeff9.webp"
                             alt="Disabled children shelter fundraiser" class="w-full h-full object-cover" />
@@ -906,15 +909,16 @@
                         <p class="text-sm text-gray-500 mb-6">by <span class="font-medium text-gray-700">Give</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>40,726 Donations</span>
                                 <span>⏱ 1471 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 100%;"></div>
                                     </div>
@@ -924,11 +928,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Donate Button Overlay -->
+                                <!-- Donate Button -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
@@ -939,7 +943,7 @@
 
                 <!-- Card 6 -->
                 <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    class="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col transition-all duration-300 md:hover:shadow-xl md:hover:-translate-y-1">
                     <div class="relative h-56">
                         <img src="https://cfstatic.give.do/8484bab7-7bd7-49dd-8a03-840f14344985.webp"
                             alt="Children protection fundraiser" class="w-full h-full object-cover" />
@@ -956,15 +960,16 @@
                                 Activities Integration</span></p>
 
                         <div class="mt-auto">
-                            <!-- Always Visible -->
+                            <!-- Always Visible Info -->
                             <div class="flex justify-between text-sm text-gray-600 font-medium mb-3">
                                 <span>8,528 Donations</span>
                                 <span>⏱ 2 Days Left</span>
                             </div>
 
-                            <div class="relative">
-                                <!-- Stats (Fades out on hover) -->
-                                <div class="transition-all duration-300 group-hover:opacity-10 group-hover:blur-[2px]">
+                            <div class="relative flex flex-col md:block">
+                                <!-- Stats (Visible on mobile, Fades out on md+ hover) -->
+                                <div
+                                    class="transition-all duration-300 md:group-hover:opacity-10 md:group-hover:blur-[2px]">
                                     <div class="w-full bg-gray-200 h-2 rounded-full mb-3 overflow-hidden">
                                         <div class="bg-red-500 h-full rounded-full" style="width: 100%;"></div>
                                     </div>
@@ -974,11 +979,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Donate Button Overlay -->
+                                <!-- Donate Button -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10">
+                                    class="mt-4 md:mt-0 md:absolute md:inset-0 flex items-center justify-center md:opacity-0 md:pointer-events-none md:group-hover:opacity-100 md:group-hover:pointer-events-auto transition-all duration-300 z-10">
                                     <button
-                                        class="w-full py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform scale-95 group-hover:scale-100">
+                                        class="w-full py-3 md:py-2.5 rounded-lg bg-red-500 text-white font-semibold shadow-md hover:bg-red-600 transition-transform transform md:scale-95 md:group-hover:scale-100">
                                         Donate Now
                                     </button>
                                 </div>
