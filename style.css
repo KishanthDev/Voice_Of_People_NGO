@@ -105,3 +105,40 @@ details[open] summary svg {
         left: 200%;
     }
 }
+
+/* Donation Ticker */
+
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-item {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #222;
+}
+
+.ticker-item b {
+    color: #E7424B;
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
