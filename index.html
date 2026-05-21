@@ -1007,7 +1007,7 @@
     </section>
 
     <!-- ================= NGO Partners Section ================ -->
-    <section id="ngo-partners" class="w-full overflow-hidden bg-white mt-16 py-16">
+    <section id="ngo-partners" class="w-full overflow-hidden bg-white pt-16">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header -->
@@ -1733,6 +1733,201 @@
         </section>
     </section>
 
+    <section class="w-full bg-[#f8f8f8] py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                <!-- Left -->
+                <div class="space-y-5">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                        Blog
+                    </h2>
+
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-md">
+                        Packed with information, initiatives and impact of the social sector
+                    </p>
+
+                    <button
+                        class="px-6 py-3 rounded-full border border-black text-black font-medium hover:bg-black hover:text-white transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Right -->
+                <div class="relative">
+
+                    <!-- Slider -->
+                    <div id="blogSlider"
+                        class="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none">
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex items-center gap-3 mt-6">
+                        <button id="prevBtn"
+                            class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-black hover:text-white transition">
+                            ←
+                        </button>
+
+                        <button id="nextBtn"
+                            class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-black hover:text-white transition">
+                            →
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Hide Scrollbar -->
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <script>
+        const blogs = [
+            {
+                title: "Fight starvation with Mission: Feed the Hungry",
+                date: "7 June 2024",
+                image:
+                    "https://cfstatic.give.do/27ad7f74-2241-4c0e-90db-a048963caa5b.webp",
+                link:
+                    "https://give.do/blog/mission-feed-the-hungry-fights-starvation-one-food-donation-at-a-time/",
+            },
+
+            {
+                title:
+                    "What do dogs, cats, buffaloes and hens have in common?",
+                date: "1 May 2024",
+                image:
+                    "https://cfstatic.give.do/74ea06a5-7a84-4254-ad52-e219d06a9528.webp",
+                link:
+                    "https://give.do/blog/india-animal-foundation-what-do-dogs-cats-horses-buffaloes-and-hens-have-in-common/",
+            },
+
+            {
+                title:
+                    "Your monthly donation can help children & elders in need",
+                date: "24 April 2024",
+                image:
+                    "https://cfstatic.give.do/c90f020b-a875-4ec3-89ea-29ad183aae75.webp",
+                link:
+                    "https://give.do/blog/your-monthly-donation-can-help-orphans-elders-and-schoolgirls/",
+            },
+
+            {
+                title:
+                    "10 FAQs on tax savings and 80G deductions for donations",
+                date: "3 April 2024",
+                image:
+                    "https://cfstatic.give.do/c190a492-0c1d-44fb-93ec-c78c2d676e04.webp",
+                link:
+                    "https://give.do/blog/10-faqs-on-tax-savings-and-80g-deduction-on-your-charitable-donations/",
+            },
+
+            {
+                title:
+                    "Make a birthday donation to an NGO in your loved one’s name",
+                date: "19 March 2024",
+                image:
+                    "https://cfstatic.give.do/8c24da6c-3f4a-439c-bd6f-d1c6c13f6690.webp",
+                link:
+                    "https://give.do/blog/heres-how-a-birthday-donation-to-an-ngo-is-a-unique-and-meaningful-idea/",
+            },
+
+            {
+                title:
+                    "10 cancer care NGOs in India helping the poor",
+                date: "4 February 2024",
+                image:
+                    "https://cfstatic.give.do/011237e4-ce6c-4e29-9882-cfd9a1948632.webp",
+                link:
+                    "https://give.do/blog/10-cancer-care-ngos-in-india-helping-poor-to-fight-cancer/",
+            },
+        ];
+        // SLIDER
+        const slider = document.getElementById("blogSlider");
+
+        // RENDER CARDS
+        blogs.forEach((blog) => {
+            slider.innerHTML += `
+            <a href="${blog.link}"
+               class="min-w-[320px] bg-white rounded-3xl overflow-hidden shadow-sm snap-start block">
+
+                <img src="${blog.image}"
+                    class="w-full h-56 object-cover pointer-events-none" />
+
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-900 leading-snug">
+                        ${blog.title}
+                    </h3>
+
+                    <p class="text-sm text-gray-500 mt-3">
+                        ${blog.date}
+                    </p>
+                </div>
+            </a>
+        `;
+        });
+
+        // BUTTONS
+        document.getElementById('nextBtn').onclick = () => {
+            slider.scrollBy({
+                left: 350,
+                behavior: 'smooth'
+            });
+        };
+
+        document.getElementById('prevBtn').onclick = () => {
+            slider.scrollBy({
+                left: -350,
+                behavior: 'smooth'
+            });
+        };
+
+        // DRAG SCROLL
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+
+            slider.classList.add('cursor-grabbing');
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+
+            e.preventDefault();
+
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
     <!-- ================= Footer Section ================ -->
     <footer class="bg-white border-t border-gray-200 pt-12 pb-8 mt-16">
         <div class="max-w-[1216px] mx-auto px-4 sm:px-6 lg:px-8">
