@@ -9,16 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconClose = document.getElementById('icon-close');
 
     if (btn && drawer && iconMenu && iconClose) {
+
+        // Helper function to close the menu
+        const closeMobileMenu = () => {
+            drawer.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            iconMenu.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+        };
+
+        // 1. Toggle on hamburger click
         btn.addEventListener('click', () => {
-            // Toggle visibility of the mobile menu drawer
             drawer.classList.toggle('hidden');
-
-            // Prevent body scrolling when menu is open
             document.body.style.overflow = drawer.classList.contains('hidden') ? 'auto' : 'hidden';
-
-            // Swap Hamburger and Close icons
             iconMenu.classList.toggle('hidden');
             iconClose.classList.toggle('hidden');
+        });
+
+        // 2. Close on any link click inside the drawer
+        const mobileLinks = drawer.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     }
 
