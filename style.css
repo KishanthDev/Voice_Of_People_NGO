@@ -1,196 +1,202 @@
-/* Accordion animation for FAQ section */
-.accordion-content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
-}
+   html {
+       scroll-padding-top: 60px;
+       /* your navbar height */
+       scroll-behavior: smooth;
+   }
 
-.accordion-item.is-open .accordion-content {
-    grid-template-rows: 1fr;
-}
+   /* Accordion animation for FAQ section */
+   .accordion-content {
+       display: grid;
+       grid-template-rows: 0fr;
+       transition: grid-template-rows 0.3s ease-in-out;
+   }
 
-.accordion-inner {
-    overflow: hidden;
-}
+   .accordion-item.is-open .accordion-content {
+       grid-template-rows: 1fr;
+   }
 
-/* Utility to hide scrollbars on draggable sections */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
+   .accordion-inner {
+       overflow: hidden;
+   }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
+   /* Utility to hide scrollbars on draggable sections */
+   .no-scrollbar::-webkit-scrollbar {
+       display: none;
+   }
 
-/* Smooth scrolling for snap containers, disabled when actively dragging */
-.snap-container {
-    scroll-behavior: smooth;
-}
+   /* Hide scrollbar for IE, Edge and Firefox */
+   .no-scrollbar {
+       -ms-overflow-style: none;
+       /* IE and Edge */
+       scrollbar-width: none;
+       /* Firefox */
+   }
+
+   /* Smooth scrolling for snap containers, disabled when actively dragging */
+   .snap-container {
+       scroll-behavior: smooth;
+   }
 
 
-/* Active Dot Styling */
-.dot.active {
-    background-color: #E7424B;
-    width: 24px;
-    border-color: #E7424B;
-}
+   /* Active Dot Styling */
+   .dot.active {
+       background-color: #E7424B;
+       width: 24px;
+       border-color: #E7424B;
+   }
 
-/* Smooth behavior */
-.slider-track {
-    scroll-behavior: smooth;
-}
+   /* Smooth behavior */
+   .slider-track {
+       scroll-behavior: smooth;
+   }
 
-.snap-container.active {
-    scroll-behavior: auto;
-}
+   .snap-container.active {
+       scroll-behavior: auto;
+   }
 
-/* Custom scrollbar style for desktop mega menus */
-.mega-menu-scroll::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-}
+   /* Custom scrollbar style for desktop mega menus */
+   .mega-menu-scroll::-webkit-scrollbar {
+       width: 6px;
+       height: 6px;
+   }
 
-.mega-menu-scroll::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    border-radius: 4px;
-}
+   .mega-menu-scroll::-webkit-scrollbar-thumb {
+       background-color: #cbd5e1;
+       border-radius: 4px;
+   }
 
-/* Remove default arrow from details/summary for mobile accordion */
-details>summary {
-    list-style: none;
-}
+   /* Remove default arrow from details/summary for mobile accordion */
+   details>summary {
+       list-style: none;
+   }
 
-details>summary::-webkit-details-marker {
-    display: none;
-}
+   details>summary::-webkit-details-marker {
+       display: none;
+   }
 
-/* Rotate arrow icon when mobile accordion (details) is open */
-details[open] summary svg {
-    transform: rotate(180deg);
-}
+   /* Rotate arrow icon when mobile accordion (details) is open */
+   details[open] summary svg {
+       transform: rotate(180deg);
+   }
 
-/* Custom shiny animation for buttons */
-.animate-shiny-button {
-    position: relative;
-    overflow: hidden;
-}
+   /* Custom shiny animation for buttons */
+   .animate-shiny-button {
+       position: relative;
+       overflow: hidden;
+   }
 
-.animate-shiny-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transform: skewX(-20deg);
-    animation: shine 3s infinite;
-}
+   .animate-shiny-button::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: -100%;
+       width: 50%;
+       height: 100%;
+       background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+       transform: skewX(-20deg);
+       animation: shine 3s infinite;
+   }
 
-/* Keyframes for the shiny button animation */
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
+   /* Keyframes for the shiny button animation */
+   @keyframes shine {
+       0% {
+           left: -100%;
+       }
 
-    20% {
-        left: 200%;
-    }
+       20% {
+           left: 200%;
+       }
 
-    100% {
-        left: 200%;
-    }
-}
+       100% {
+           left: 200%;
+       }
+   }
 
-/* Donation Ticker */
+   /* Donation Ticker */
 
-.ticker-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
+   .ticker-wrapper {
+       width: 100%;
+       overflow: hidden;
+       position: relative;
+   }
 
-.ticker-track {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    width: max-content;
-    animation: ticker-scroll 30s linear infinite;
-}
+   .ticker-track {
+       display: flex;
+       align-items: center;
+       gap: 40px;
+       width: max-content;
+       animation: ticker-scroll 30s linear infinite;
+   }
 
-.ticker-item {
-    flex-shrink: 0;
-    white-space: nowrap;
-    font-size: 15px;
-    color: #222;
-}
+   .ticker-item {
+       flex-shrink: 0;
+       white-space: nowrap;
+       font-size: 15px;
+       color: #222;
+   }
 
-.ticker-item b {
-    color: #E7424B;
-}
+   .ticker-item b {
+       color: #E7424B;
+   }
 
-@keyframes ticker-scroll {
-    from {
-        transform: translateX(0);
-    }
+   @keyframes ticker-scroll {
+       from {
+           transform: translateX(0);
+       }
 
-    to {
-        transform: translateX(-50%);
-    }
-}
+       to {
+           transform: translateX(-50%);
+       }
+   }
 
-/* "What We Do" Project Cards */
-.project-card {
-    background-color: white;
-    border-radius: 1rem;
-    /* 16px */
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    transition: all 0.3s ease-in-out;
-    border: 1px solid #e5e7eb;
-    /* border-gray-200 */
-    display: flex;
-    flex-direction: column;
-}
+   /* "What We Do" Project Cards */
+   .project-card {
+       background-color: white;
+       border-radius: 1rem;
+       /* 16px */
+       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+       transition: all 0.3s ease-in-out;
+       border: 1px solid #e5e7eb;
+       /* border-gray-200 */
+       display: flex;
+       flex-direction: column;
+   }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
+   .project-card:hover {
+       transform: translateY(-8px);
+       box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+   }
 
-/* Impact Section Badges */
-.impact-badge {
-    background-color: #f9fafb;
-    /* gray-50 */
-    border-radius: 1rem;
-    /* 16px */
-    padding: 2rem;
-    /* 32px */
-    text-align: center;
-    border: 1px solid #e5e7eb;
-    /* border-gray-200 */
-    transition: all 0.3s ease-in-out;
-}
+   /* Impact Section Badges */
+   .impact-badge {
+       background-color: #f9fafb;
+       /* gray-50 */
+       border-radius: 1rem;
+       /* 16px */
+       padding: 2rem;
+       /* 32px */
+       text-align: center;
+       border: 1px solid #e5e7eb;
+       /* border-gray-200 */
+       transition: all 0.3s ease-in-out;
+   }
 
-.impact-badge:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    background-color: white;
-}
+   .impact-badge:hover {
+       transform: translateY(-4px);
+       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+       background-color: white;
+   }
 
-/* Contact Section Icons */
-.contact-icon {
-    background-color: #fee2e2;
-    /* red-100 */
-    color: #dc2626;
-    /* red-600 */
-    border-radius: 50%;
-    padding: 0.75rem;
-    /* 12px */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+   /* Contact Section Icons */
+   .contact-icon {
+       background-color: #fee2e2;
+       /* red-100 */
+       color: #dc2626;
+       /* red-600 */
+       border-radius: 50%;
+       padding: 0.75rem;
+       /* 12px */
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+   }
