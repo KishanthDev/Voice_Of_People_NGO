@@ -16,13 +16,12 @@
         <div
             class="max-w-[1216px] mx-auto h-[86px] flex items-center justify-between lg:justify-start px-4 sm:px-6 lg:px-8 py-[18px]">
 
-            <!-- Logo -->
-            <div class="h-full cursor-pointer flex items-center shrink-0">
+            <a href="#" class="h-full cursor-pointer flex items-center shrink-0">
                 <h1
                     class="text-2xl lg:text-3xl font-black bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent tracking-wide drop-shadow-sm">
                     Voice Of People
                 </h1>
-            </div>
+            </a>
 
             <!-- Mobile Hamburger Toggle -->
             <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-rose-600 focus:outline-none">
@@ -116,15 +115,13 @@
                         </div>
                     </li>
 
-                    <!-- Direct Links -->
-                    <li class="px-3 py-2 cursor-pointer"><span
-                            class="text-base font-medium text-gray-700 hover:text-rose-600 transition-colors">Our
-                            Impact</span></li>
-                    <li class="px-3 py-2 cursor-pointer"><span
-                            class="text-base font-medium text-gray-700 hover:text-rose-600 transition-colors">CSR</span>
+                    <li class="px-3 py-2 cursor-pointer">
+                        <a href="#impact" class="text-base font-medium text-gray-700 hover:text-rose-600 transition-colors">Our Impact</a>
+                    </li>
+                    <li class="px-3 py-2 cursor-pointer">
+                        <a href="#what-we-do" class="text-base font-medium text-gray-700 hover:text-rose-600 transition-colors">Projects</a>
                     </li>
 
-                    <!-- About -->
                     <li class="group relative px-3 py-2 cursor-pointer">
                         <div class="flex items-center text-gray-700 hover:text-rose-600 transition-colors">
                             <span class="text-base font-medium">About</span>
@@ -139,12 +136,9 @@
                             class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div
                                 class="bg-white rounded-xl shadow-xl border border-gray-100 py-2 w-[240px] flex flex-col">
-                                <p class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">
-                                    Our Story</p>
-                                <p class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">
-                                    Blog</p>
-                                <p class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">
-                                    Contact us</p>
+                                <a href="#about-us" class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">Our Story</a>
+                                <a href="#blog" class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">Blog</a>
+                                <a href="#contact" class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">Contact us</a>
                             </div>
                         </div>
                     </li>
@@ -152,7 +146,7 @@
                     <!-- More -->
                     <li class="group relative px-3 py-2 cursor-pointer">
                         <div class="flex items-center text-gray-700 hover:text-rose-600 transition-colors">
-                            <span class="text-base font-medium">More from Give</span>
+                            <span class="text-base font-medium">More</span>
                             <svg class="w-5 h-5 ml-1 fill-current transition-transform duration-200 group-hover:rotate-180"
                                 viewBox="0 0 24 24">
                                 <path
@@ -164,13 +158,12 @@
                             class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div
                                 class="bg-white rounded-xl shadow-xl border border-gray-100 py-2 w-[276px] flex flex-col">
-                                <p class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">
-                                    Gift Cards</p>
+                                <a href="#ngo-partners" class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">Our Partners</a>
+                                <a href="#faq" class="px-5 py-2.5 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-rose-600">FAQs</a>
                             </div>
                         </div>
                     </li>
 
-                    <!-- Login -->
                     <li class="ml-4 pl-4 border-l border-gray-200">
                         <button
                             class="bg-white border-2 border-rose-500 text-rose-600 hover:bg-rose-50 font-semibold px-6 py-2 rounded-full transition-colors duration-200">Login</button>
@@ -220,15 +213,14 @@
                     </div>
                 </details>
 
-                <!-- Mobile Direct Links -->
-                <a href="#" class="block text-lg font-medium text-gray-800 py-3 border-b border-gray-100">Our Impact</a>
-                <a href="#" class="block text-lg font-medium text-gray-800 py-3 border-b border-gray-100">CSR</a>
+                <a href="#impact" class="block text-lg font-medium text-gray-800 py-3 border-b border-gray-100">Our Impact</a>
+                <a href="#what-we-do" class="block text-lg font-medium text-gray-800 py-3 border-b border-gray-100">Projects</a>
 
                 <!-- Mobile About Accordion -->
                 <details class="group border-b border-gray-100 pb-2">
                     <summary
                         class="flex justify-between items-center text-lg font-medium text-gray-800 py-3 cursor-pointer">
-                        About
+                        About & More
                         <svg class="w-6 h-6 fill-current text-gray-500 transition-transform duration-200"
                             viewBox="0 0 24 24">
                             <path
@@ -237,10 +229,11 @@
                         </svg>
                     </summary>
                     <div class="pl-4 pb-2 flex flex-col space-y-3 mt-1">
-                        <a href="#" class="text-[15px] text-gray-600 py-1">Our Story</a>
-                        <a href="#" class="text-[15px] text-gray-600 py-1">How Your Donation Works</a>
-                        <a href="#" class="text-[15px] text-gray-600 py-1">Blog</a>
-                        <a href="#" class="text-[15px] text-gray-600 py-1">Contact us</a>
+                        <a href="#about-us" class="text-[15px] text-gray-600 py-1 block">Our Story</a>
+                        <a href="#ngo-partners" class="text-[15px] text-gray-600 py-1 block">Our Partners</a>
+                        <a href="#blog" class="text-[15px] text-gray-600 py-1 block">Blog</a>
+                        <a href="#contact" class="text-[15px] text-gray-600 py-1 block">Contact us</a>
+                        <a href="#faq" class="text-[15px] text-gray-600 py-1 block">FAQs</a>
                     </div>
                 </details>
 
@@ -292,7 +285,7 @@
                     Support Our Mission
                 </a>
 
-                <a href="#partner"
+                <a href="#ngo-partners"
                     class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold py-4 px-8 rounded-full hover:bg-white/20 transition duration-300">
                     Partner With Us
                 </a>
@@ -446,8 +439,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800">Our 3 Mega Projects</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="project-card">
+                <div class="project-card bg-white shadow-md rounded-xl">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900">Housing the Homeless</h3>
                         <p class="text-sm font-semibold text-red-600 uppercase tracking-wider mt-1">Mane Kattsikododu
@@ -461,8 +453,7 @@
                         </p>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="project-card">
+                <div class="project-card bg-white shadow-md rounded-xl">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900">Livelihood Empowerment</h3>
                         <p class="text-sm font-semibold text-red-600 uppercase tracking-wider mt-1">Shop Setup &
@@ -477,8 +468,7 @@
                         </p>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="project-card">
+                <div class="project-card bg-white shadow-md rounded-xl">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-900">Healthcare & Old Age Home</h3>
                         <p class="text-sm font-semibold text-red-600 uppercase tracking-wider mt-1">Ashrama Support</p>
@@ -1564,7 +1554,7 @@
         </div>
     </section>
 
-    <section class="w-full bg-[#f8f8f8] py-16 overflow-hidden">
+    <section id="blog" class="w-full bg-[#f8f8f8] py-16 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -1628,75 +1618,41 @@
             {
                 title: "Fight starvation with Mission: Feed the Hungry",
                 date: "7 June 2024",
-                image:
-                    "https://cfstatic.give.do/27ad7f74-2241-4c0e-90db-a048963caa5b.webp",
-                link:
-                    "https://give.do/blog/mission-feed-the-hungry-fights-starvation-one-food-donation-at-a-time/",
                 image: "https://cfstatic.give.do/27ad7f74-2241-4c0e-90db-a048963caa5b.webp",
                 link: "#",
             },
 
             {
-                title:
-                    "What do dogs, cats, buffaloes and hens have in common?",
                 title: "What do dogs, cats, buffaloes and hens have in common?",
                 date: "1 May 2024",
-                image:
-                    "https://cfstatic.give.do/74ea06a5-7a84-4254-ad52-e219d06a9528.webp",
-                link:
-                    "https://give.do/blog/india-animal-foundation-what-do-dogs-cats-horses-buffaloes-and-hens-have-in-common/",
                 image: "https://cfstatic.give.do/74ea06a5-7a84-4254-ad52-e219d06a9528.webp",
                 link: "#",
             },
 
             {
-                title:
-                    "Your monthly donation can help children & elders in need",
                 title: "Your monthly donation can help children & elders in need",
                 date: "24 April 2024",
-                image:
-                    "https://cfstatic.give.do/c90f020b-a875-4ec3-89ea-29ad183aae75.webp",
-                link:
-                    "https://give.do/blog/your-monthly-donation-can-help-orphans-elders-and-schoolgirls/",
                 image: "https://cfstatic.give.do/c90f020b-a875-4ec3-89ea-29ad183aae75.webp",
                 link: "#",
             },
 
             {
-                title:
-                    "10 FAQs on tax savings and 80G deductions for donations",
                 title: "10 FAQs on tax savings and 80G deductions for donations",
                 date: "3 April 2024",
-                image:
-                    "https://cfstatic.give.do/c190a492-0c1d-44fb-93ec-c78c2d676e04.webp",
-                link:
-                    "https://give.do/blog/10-faqs-on-tax-savings-and-80g-deduction-on-your-charitable-donations/",
                 image: "https://cfstatic.give.do/c190a492-0c1d-44fb-93ec-c78c2d676e04.webp",
                 link: "#",
             },
 
             {
-                title:
-                    "Make a birthday donation to an NGO in your loved one’s name",
                 title: "Make a birthday donation to an NGO in your loved one’s name",
                 date: "19 March 2024",
-                image:
-                    "https://cfstatic.give.do/8c24da6c-3f4a-439c-bd6f-d1c6c13f6690.webp",
-                link:
-                    "https://give.do/blog/heres-how-a-birthday-donation-to-an-ngo-is-a-unique-and-meaningful-idea/",
                 image: "https://cfstatic.give.do/8c24da6c-3f4a-439c-bd6f-d1c6c13f6690.webp",
                 link: "#",
             },
 
             {
-                title:
-                    "10 cancer care NGOs in India helping the poor",
                 title: "10 cancer care NGOs in India helping the poor",
                 date: "4 February 2024",
-                image:
-                    "https://cfstatic.give.do/011237e4-ce6c-4e29-9882-cfd9a1948632.webp",
-                link:
-                    "https://give.do/blog/10-cancer-care-ngos-in-india-helping-poor-to-fight-cancer/",
                 image: "https://cfstatic.give.do/011237e4-ce6c-4e29-9882-cfd9a1948632.webp",
                 link: "#",
             },
