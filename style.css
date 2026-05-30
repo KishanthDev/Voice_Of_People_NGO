@@ -142,3 +142,55 @@ details[open] summary svg {
         transform: translateX(-50%);
     }
 }
+
+/* "What We Do" Project Cards */
+.project-card {
+    background-color: white;
+    border-radius: 1rem;
+    /* 16px */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #e5e7eb;
+    /* border-gray-200 */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Impact Section Badges */
+.impact-badge {
+    background-color: #f9fafb;
+    /* gray-50 */
+    border-radius: 1rem;
+    /* 16px */
+    padding: 2rem;
+    /* 32px */
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    /* border-gray-200 */
+    transition: all 0.3s ease-in-out;
+}
+
+.impact-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background-color: white;
+}
+
+/* Contact Section Icons */
+.contact-icon {
+    background-color: #fee2e2;
+    /* red-100 */
+    color: #dc2626;
+    /* red-600 */
+    border-radius: 50%;
+    padding: 0.75rem;
+    /* 12px */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
